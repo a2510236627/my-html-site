@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSR指纹图谱分析结果</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .info-box {
+            background-color: white;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 4px solid #3498db;
+            border-radius: 3px;
+        }
+        .code {
+            font-family: "Courier New", monospace;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border: 1px solid #e9ecef;
+            border-radius: 3px;
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SSR指纹图谱分析结果</h1>
+        <div class="info-box">
+            <h2>个体信息</h2>
+            <p><strong>
+                个体来源：广西壮族自治区国有六万林场<br>
+                个体名称：1_09</strong></p>
+        </div>
+        
+        <div class="info-box">
+            <h2>指纹编码</h2>
+            <div class="code"></div>
+            <p><strong>
+                编码：101000101000001000000000100010000<br>
+                基因：(HMXS019.250)(HMXS019.256)(HMXS052.216)(HMXS052.220)(HMXS101.167)(HMXS129.221)(HMXS129.227)
+            </strong></p>
+        </div>
+        
+        <div class="info-box">
+            <h2>数据说明</h2>
+            <p>1.编码数据中，每个字符代表一个特定的基因，1代表个体存在该基因，0代表个体不存在该基因。<br>
+               2.基因数据中，"."前为位点名称，"."后为位点基因型</p>
+        </div>
+        
+
+    </div>
+</body>
+</html>
