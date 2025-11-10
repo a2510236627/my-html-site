@@ -7,12 +7,13 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 40px;
-            font-size: 1rem;
             line-height: 1.5;
+            padding: 16px;
+            font-size: 16px; /* 微信推荐基础字体大小 */
+            -webkit-font-smoothing: antialiased;
         }
         .container {
-            max-width: 800px;
+            max-width: 100%;
             margin: 0 auto;
             padding: 20px;
             border: 1px solid #ddd;
@@ -21,30 +22,41 @@
         }
         h1 {
             color: #2c3e50;
-            font-size: 2rem;
-            margin: 1rem 0;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
             text-align: center;
+        }
+        h2 {
+            font-size: 17px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
         }
         .info-box {
             background-color: white;
-            padding: 15px;
-            margin: 15px 0;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
             border-left: 4px solid #3498db;
-            border-radius: 3px;
         }
         .code {
             font-family: "Courier New", monospace;
+            font-size: 15px;
+            line-height: 1.4;
             background-color: #f8f9fa;
             padding: 10px;
             border: 1px solid #e9ecef;
             border-radius: 3px;
             word-break: break-all;
+            letter-spacing: 0.5px;
         }
-        @media (max-width: 320px) {
-      html {
-        font-size: 14px; /* 如确实需要，可略微缩小 */
-      }
-    }
+        .weui-reset {
+            -webkit-text-size-adjust: 100% !important;
+            text-size-adjust: 100% !important;
+        }
     </style>
 </head>
 <body>
