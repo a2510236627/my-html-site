@@ -176,13 +176,17 @@
 <body class="weui-reset">
     <div class="container">
         <div class="header">
-            <h1>🧬 SSR指纹图谱分析结果</h1>
+            <h1>SSR指纹图谱分析结果</h1>
             <div class="subtitle">遗传标记编码数据</div>
         </div>
         
         <div class="info-card">
             <h2>🔍 个体信息</h2>
-            <p><strong>个体名称：</strong><span class="individual-name">AM01</span></p>
+            <p><strong>
+                个体名称：</strong><span class="individual-name">AM01</span><br>
+               <strong>
+                个体来源：</strong><span class="individual-name">广西壮族自治区国有六万林场</span>
+            </p>
         </div>
         
         <div class="info-card">
@@ -192,19 +196,22 @@
             </div>
             <p class="stats"><strong>编码长度：</strong>33 位</p>
         </div>
-        
+
+        <div class="info-card">
+            <h2>🧬 基因信息</h2>
+            <div class="code-container">
+                <div class="code">(HMXS019.250 256)(HMXS052.216 220)(HMXS101.167)(HMXS129.221 227)</div>
+            </div>
+            <p class="stats"><strong>基因数量：</strong>7 个</p>
+        </div>
+
         <div class="info-card">
             <h2>📝 数据说明</h2>
-            <p>此数据为SSR（简单序列重复）指纹图谱分析得到的二进制编码数据。</p>
-            <div class="note">
-                <p><strong>温馨提示：</strong>在微信内浏览时，如需复制编码，请长按编码区域选择文本。</p>
-            </div>
+            <p>1.指纹编码中，每个字符代表一个特定的基因，1代表个体存在该基因，0代表个体不存在该基因。</p>
+            <p>2.基因信息中，"."前为位点名称，"."后为位点基因型</p>
         </div>
         
-        <footer>
-            <p>生成时间：2024-01-01 12:00:00</p>
-            <p style="margin-top: 4px;">微信内浏览优化版本</p>
-        </footer>
+
     </div>
 
     <script>
