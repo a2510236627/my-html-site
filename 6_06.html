@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>SSR指纹图谱 - AM01</title>
+    <style>
+        /* 微信浏览器特殊重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-text-size-adjust: 100% !important;
+            text-size-adjust: 100% !important;
+        }
+        
+        /* 关键：使用px单位确保一致性 */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", 
+                       "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.5;
+            color: #333333;
+            background: #ffffff;
+            padding: 16px;
+            font-size: 16px; /* 微信推荐基础字体大小 */
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background: #ffffff;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #07C160, #09B357);
+            color: white;
+            padding: 20px 16px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .info-card {
+            background: #f8f8f8;
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            border-left: 4px solid #07C160;
+        }
+        
+        h2 {
+            font-size: 17px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2::before {
+            content: "•";
+            color: #07C160;
+            margin-right: 8px;
+            font-size: 18px;
+        }
+        
+        .individual-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #e64340;
+            background: linear-gradient(45deg, #e64340, #d81e06);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .code-container {
+            background: #2c3e50;
+            border-radius: 6px;
+            padding: 16px;
+            margin: 12px 0;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .code {
+            font-family: "Monaco", "Menlo", "Consolas", "Courier New", monospace;
+            font-size: 15px;
+            color: #ffffff;
+            line-height: 1.4;
+            word-break: break-all;
+            letter-spacing: 0.5px;
+        }
+        
+        .stats {
+            font-size: 14px;
+            color: #666666;
+            margin-top: 8px;
+        }
+        
+        .note {
+            background: #e6f7ff;
+            border: 1px solid #91d5ff;
+            border-radius: 6px;
+            padding: 12px 16px;
+            margin-top: 16px;
+        }
+        
+        .note p {
+            font-size: 14px;
+            color: #0050b3;
+            line-height: 1.5;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid #e8e8e8;
+            color: #999999;
+            font-size: 12px;
+        }
+        
+        /* 微信内浏览器特殊优化 */
+        @media (max-width: 480px) {
+            body {
+                font-size: 16px; /* 保持固定大小 */
+                padding: 12px;
+            }
+            
+            .header {
+                padding: 16px 12px;
+            }
+            
+            h1 {
+                font-size: 18px;
+            }
+            
+            .info-card {
+                font-size: 16px;
+                padding: 12px;
+            }
+            
+            h2 {
+                font-size: 16px;
+            }
+            
+            .individual-name {
+                font-size: 17px;
+            }
+            
+            .code {
+                font-size: 14px;
+            }
+        }
+        
+        /* 防止微信调整字体 */
+        .weui-reset {
+            -webkit-text-size-adjust: 100% !important;
+            text-size-adjust: 100% !important;
+        }
+    </style>
+</head>
+<body class="weui-reset">
+    <div class="container">
+        <div class="header">
+            <h1>SSR指纹图谱分析结果</h1>
+            <div class="subtitle">遗传标记编码数据</div>
+        </div>
+        
+        <div class="info-card">
+            <h2>🔍 个体信息</h2>
+            <p><strong>
+                个体名称：</strong><span class="individual-name">6_06</span><br>
+               <strong>
+                个体来源：</strong><span class="individual-name">广西壮族自治区国有六万林场</span>
+            </p>
+        </div>
+        
+        <div class="info-card">
+            <h2>📊 指纹编码</h2>
+            <div class="code-container">
+                <div class="code">000100000000000001000000000000010</div>
+            </div>
+            <p class="stats"><strong>编码长度：</strong>33 位</p>
+        </div>
+
+        <div class="info-card">
+            <h2>🧬 基因信息</h2>
+            <div class="code-container">
+                <div class="code">( HMXS019.254 ) ( HMXS101.176 ) ( HMXS129.220 )</div>
+            </div>
+            <p class="stats"><strong>基因数量：</strong>3 个</p>
+        </div>
+
+        <div class="info-card">
+            <h2>📝 数据说明</h2>
+            <p>1.指纹编码中，每个字符代表一个特定的基因，1代表个体存在该基因，0代表个体不存在该基因。</p>
+            <p>2.基因信息中，"."前为位点名称，"."后为位点基因型</p>
+        </div>
+        
+
+    </div>
+
+    <script>
+        // 阻止微信调整字体大小
+        (function() {
+            if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+                handleFontSize();
+            } else {
+                if (document.addEventListener) {
+                    document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+                } else if (document.attachEvent) {
+                    document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+                    document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+                }
+            }
+            function handleFontSize() {
+                // 设置网页字体大小，防止被微信调整
+                WeixinJSBridge.invoke("setFontSizeCallback", { "fontSize": 0 });
+                // 重写设置网页字体大小的事件
+                WeixinJSBridge.on("menu:setfont", function() {
+                    WeixinJSBridge.invoke("setFontSizeCallback", { "fontSize" : 0 });
+                });
+            }
+        })();
+        
+        // 禁用缩放
+        document.addEventListener("touchstart", function(event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        });
+        
+        var lastTouchEnd = 0;
+        document.addEventListener("touchend", function(event) {
+            var now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+    </script>
+</body>
+</html>
